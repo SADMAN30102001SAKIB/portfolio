@@ -4,8 +4,10 @@ import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ExperienceSection from '@/components/ExperienceSection';
+import EducationSection from '@/components/EducationSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import SkillsSection from '@/components/SkillsSection';
+import CertificationsSection from '@/components/CertificationsSection';
 
 export default function HomePage() {
   return (
@@ -18,8 +20,10 @@ export default function HomePage() {
       
       <AboutSection />
       <ExperienceSection />
+      <EducationSection />
       <ProjectsSection />
       <SkillsSection />
+      <CertificationsSection />
       
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">

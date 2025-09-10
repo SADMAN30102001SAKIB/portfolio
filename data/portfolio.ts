@@ -5,7 +5,6 @@ export const personalInfo = {
   title: "Full Stack Developer",
   tagline: "Building scalable applications with modern technologies",
   bio: "I'm a Software Developer with 2+ years of hands-on experience in building scalable web & mobile applications using Next.js, React Native, TypeScript, PostgreSQL, Docker, GitHub Actions, VPS etc. My focus is on delivering clean code, scalable architecture, and seamless user experience across platforms.",
-  avatar: "/images/avatar.jpg", // You'll need to add your photo
   location: "Rajshahi, Bangladesh",
   openToWork: true,
   githubStats: {
@@ -19,8 +18,7 @@ export const contact: Contact = {
   email: "sadman30102001sakib@gmail.com",
   location: "Rajshahi, Bangladesh",
   github: "https://github.com/SADMAN30102001SAKIB",
-  linkedin: "https://www.linkedin.com/in/sadmansakib30102001",
-  website: "https://sadman.me"
+  linkedin: "https://www.linkedin.com/in/sadmansakib30102001"
 };
 
 export const projects: Project[] = [
@@ -341,13 +339,19 @@ export const education: Education[] = [
     description: "Pursuing Bachelor's degree in Computer Science and Engineering with focus on software development, algorithms, and system design.",
     relevant_courses: [
       "Algorithm Analysis and Design",
-      "Applied Statistics and Queuing Theory",
-      "Data Structures and Algorithms",
-      "Database Management Systems",
+      "Data Structure",
+      "Database Systems", 
       "Software Engineering",
-      "Computer Networks",
       "Operating Systems",
-      "Object-Oriented Programming"
+      "Object Oriented Programming",
+      "Web Based Application Project",
+      "Software Development Project I & II",
+      "Data Communication",
+      "Computer Architecture",
+      "Artificial Intelligence",
+      "Theory of Computation",
+      "Numerical Methods",
+      "Discrete Mathematics"
     ]
   },
   {
@@ -359,6 +363,16 @@ export const education: Education[] = [
     endDate: "2021",
     current: false,
     description: "Completed Higher Secondary education with focus on Science group."
+  },
+  {
+    id: "thakurgaon-ssc",
+    degree: "Secondary School Certificate",
+    institution: "Thakurgaon Govt. Boys' High School",
+    location: "Thakurgaon, Bangladesh",
+    startDate: "2011",
+    endDate: "2019",
+    current: false,
+    description: "Completed Secondary School education with strong foundation in science and mathematics."
   }
 ];
 
