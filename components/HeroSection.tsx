@@ -26,13 +26,11 @@ const TypewriterEffect = () => {
     if (!mounted || !isTyping) return;
     
     const roles = [
-      "Full Stack Developer",
-      "Co-Founder & Tech Lead",
       "Software Engineer", 
-      "Web Developer",
+      "Co-Founder & Tech Lead",
       "Mobile App Developer",
       "System Architect",
-      "DevOps Engineer"
+      "Web App Developer"
     ];
     
     const currentRole = roles[currentRoleIndex];
@@ -181,7 +179,7 @@ export default function HeroSection() {
         >
           <p className="text-sm text-muted-foreground mb-6 text-center font-medium">Primary Tech Stack</p>
           <div className="flex flex-wrap items-center justify-center gap-3 max-w-5xl mx-auto">
-            {['TypeScript', 'Next.js', 'React Native', 'Node.js', 'PostgreSQL', 'Docker', 'AWS'].map((tech, index) => (
+            {['TypeScript', 'Next.js', 'React Native', 'Node.js', 'PostgreSQL', 'Docker'].map((tech, index) => (
               <motion.div
                 key={tech}
                 className="px-5 py-3 glass rounded-xl text-sm font-medium border border-white/20 hover:border-primary/50 transition-all duration-300"
