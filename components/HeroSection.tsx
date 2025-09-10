@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 const TypewriterEffect = () => {
   const [mounted, setMounted] = useState(false);
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  const [currentText, setCurrentText] = useState('Full Stack Developer');
+  const [currentText, setCurrentText] = useState('Software Engineer');
   const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const TypewriterEffect = () => {
 
   return (
     <span className="gradient-text font-semibold">
-      {currentText || 'Full Stack Developer'}
+      {currentText || 'Software Engineer'}
       <span className="animate-pulse">|</span>
     </span>
   );
