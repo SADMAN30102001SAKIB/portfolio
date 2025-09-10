@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description: 'Software Developer specializing in modern web technologies and scalable applications.',
   },
   icons: {
-    icon: favicon,
+    icon: favicon.src,
   },
 }
 
