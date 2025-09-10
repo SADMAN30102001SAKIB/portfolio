@@ -20,7 +20,7 @@ export const contact: Contact = {
   location: "Rajshahi, Bangladesh",
   github: "https://github.com/SADMAN30102001SAKIB",
   linkedin: "https://www.linkedin.com/in/sadmansakib30102001",
-  website: "https://sadmansakib.dev"
+  website: "https://sadman.me"
 };
 
 export const projects: Project[] = [
