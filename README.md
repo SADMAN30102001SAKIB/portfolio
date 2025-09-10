@@ -16,7 +16,7 @@ A modern portfolio website showcasing my projects and experience as a Full Stack
 - Tailwind CSS + Framer Motion
 - Vercel deployment ready
 
-## � Quick Start
+## 🏍️ Quick Start
 
 ```bash
 git clone https://github.com/SADMAN30102001SAKIB/portfolio.git
