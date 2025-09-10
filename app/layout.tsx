@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import favicon from './favicon.ico';
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -22,6 +23,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sadman Sakib - Full Stack Developer',
     description: 'Software Developer specializing in modern web technologies and scalable applications.',
+  },
+  icons: {
+    icon: favicon,
   },
 }
 
