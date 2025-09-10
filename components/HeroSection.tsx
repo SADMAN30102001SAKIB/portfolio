@@ -51,7 +51,7 @@ const TypewriterEffect = () => {
 
   return (
     <span className="gradient-text font-semibold">
-      {currentText || 'Software Engineer'}
+      {currentText || ''}
       <span className="animate-pulse">|</span>
     </span>
   );
