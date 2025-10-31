@@ -81,7 +81,7 @@ export const projects: Project[] = [
     technologies: ["Next.js 15", "TypeScript", "PostgreSQL", "CSS Modules", "Vercel", "Session Auth", "RBAC"],
     category: "Web Development",
     featured: true,
-    liveUrl: "https://ruet-ugrms.vercel.app/",
+    liveUrl: "https://ruet-ugrms.sadman.me",
     githubUrl: "https://github.com/SADMAN30102001SAKIB/ruet-undergraduate-result-management-system",
     startDate: "2025-05",
     endDate: "2025-07",
@@ -104,12 +104,12 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Appwrite", "PWA", "Discord API", "Python", "MQL5", "MetaTrader", "VPS"],
     category: "Web Development",
     featured: true,
-    liveUrl: "https://nexusfuturefund.vercel.app/",
+    liveUrl: "https://nexusfuturefund.sadman.me",
     githubUrl: "https://github.com/SADMAN30102001SAKIB/nexus-future-fund",
     additionalLinks: [
       {
         name: "Trading Signal Tool",
-        url: "https://nffsignal.vercel.app/"
+        url: "https://nffsignal.sadman.me"
       },
       {
         name: "Discord Signal Sender",
@@ -205,7 +205,7 @@ export const projects: Project[] = [
     technologies: ["JavaScript", "Python", "Flask", "KaTeX", "SymPy", "LaTeX"],
     category: "Web Development",
     featured: false,
-    liveUrl: "https://sadmanodesolver.netlify.app/",
+    liveUrl: "https://odesolver.sadman.me",
     githubUrl: "https://github.com/SADMAN30102001SAKIB/ordinary-differential-equation-solver-client",
     additionalLinks: [
       {
@@ -323,7 +323,7 @@ export const experiences: Experience[] = [
       "Developed Discord bot integration for trading signals",
       "Created enterprise-grade code structure with proper versioning and environment isolation"
     ],
-    websiteUrl: "https://nexusfuturefund.vercel.app"
+    websiteUrl: "https://nexusfuturefund.sadman.me"
   }
 ];
 
