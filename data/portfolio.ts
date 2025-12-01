@@ -8,9 +8,9 @@ export const personalInfo = {
   location: "Rajshahi, Bangladesh",
   openToWork: true,
   githubStats: {
-    followers: 6,
-    repositories: 44,
-    contributions: 1165
+    followers: 11,
+    repositories: 39,
+    contributions: 1360
   }
 };
 
