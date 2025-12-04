@@ -1,8 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Award, Calendar, ExternalLink, CheckCircle } from 'lucide-react';
+import { Award, Calendar, ExternalLink, CheckCircle, Image as ImageIcon, X } from 'lucide-react';
+import Image from 'next/image';
 import { certificates } from '@/data/portfolio';
+import { Certificate } from '@/types';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -18,6 +21,8 @@ const staggerChildren = {
 };
 
 export default function CertificationsSection() {
+  const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
+
   return (
     <section id="certifications" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -85,6 +90,24 @@ export default function CertificationsSection() {
                     </div>
                   )}
 
+                  {cert.description && (
+                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                      {cert.description}
+                    </p>
+                  )}
+
+                  {cert.imageUrl && (
+                    <div className="mb-4">
+                      <button
+                        onClick={() => setSelectedCert(cert)}
+                        className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                      >
+                        <ImageIcon className="w-4 h-4" />
+                        View Certificate
+                      </button>
+                    </div>
+                  )}
+
                   {cert.skills && cert.skills.length > 0 && (
                     <div>
                       <h5 className="font-semibold text-foreground mb-3 flex items-center gap-2">
@@ -108,6 +131,42 @@ export default function CertificationsSection() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Certificate Image Modal */}
+        {selectedCert && selectedCert.imageUrl && (
+          <div 
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedCert(null)}
+          >
+            <motion.div
+              className="relative max-w-2xl w-full"
+              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+            >
+              <button
+                onClick={() => setSelectedCert(null)}
+                className="absolute -top-12 right-0 text-white hover:text-primary transition-colors"
+              >
+                <X className="w-8 h-8" />
+              </button>
+              <div className="bg-card border border-border rounded-xl overflow-hidden">
+                <Image
+                  src={selectedCert.imageUrl}
+                  alt={selectedCert.name}
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="mt-4 text-center">
+                <h3 className="text-xl font-bold text-white">{selectedCert.name}</h3>
+                <p className="text-muted-foreground">{selectedCert.issuer}</p>
+              </div>
+            </motion.div>
+          </div>
+        )}
 
         {certificates.length === 0 && (
           <motion.div 

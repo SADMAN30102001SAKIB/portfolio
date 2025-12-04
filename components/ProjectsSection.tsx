@@ -38,7 +38,7 @@ export default function ProjectsSection() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'Completed': return 'text-green-400 bg-green-400/20';
-      case 'In Progress': return 'text-yellow-400 bg-yellow-400/20';
+      case 'Ongoing': return 'text-yellow-400 bg-yellow-400/20';
       case 'Planned': return 'text-blue-400 bg-blue-400/20';
       default: return 'text-gray-400 bg-gray-400/20';
     }

@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { personalInfo, contact } from '@/data/portfolio';
 import { useEffect, useState } from 'react';
+import { useEmailCopy } from './EmailCopyProvider';
+import { GitHubStats } from '@/types';
 
 const TypewriterEffect = () => {
   const [mounted, setMounted] = useState(false);
@@ -29,7 +31,6 @@ const TypewriterEffect = () => {
       "Software Engineer", 
       "Co-Founder & Tech Lead",
       "Mobile App Developer",
-      "System Architect",
       "Web App Developer"
     ];
     
@@ -57,7 +58,14 @@ const TypewriterEffect = () => {
   );
 };
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  initialGitHubStats: GitHubStats;
+}
+
+export default function HeroSection({ initialGitHubStats }: HeroSectionProps) {
+  const [githubStats] = useState<GitHubStats>(initialGitHubStats);
+  const { copyEmail } = useEmailCopy();
+
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
@@ -83,9 +91,9 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-cyan-600/10"></div>
       
       {/* Floating elements */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl float"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl float" style={{ animationDelay: '-2s' }}></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl float" style={{ animationDelay: '-4s' }}></div>
+      <div className="absolute top-20 -left-20 md:left-10 lg:left-20 w-48 md:w-72 h-48 md:h-72 bg-blue-500/10 rounded-full blur-3xl float"></div>
+      <div className="absolute bottom-20 -right-20 md:right-10 lg:right-20 w-64 md:w-96 h-64 md:h-96 bg-purple-500/10 rounded-full blur-3xl float" style={{ animationDelay: '-2s' }}></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 md:w-64 h-48 md:h-64 bg-cyan-500/10 rounded-full blur-3xl float" style={{ animationDelay: '-4s' }}></div>
 
       <div className="relative z-10 max-w-6xl mx-auto text-center">
         <motion.div {...fadeInUp}>
@@ -98,21 +106,21 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.h1 
-          className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 tracking-tight px-2"
           {...fadeInUp}
         >
           <span className="gradient-text">Sadman Sakib</span>
         </motion.h1>
 
         <motion.div 
-          className="text-xl md:text-2xl lg:text-3xl mb-4 min-h-[2.5rem] flex items-center justify-center"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 min-h-[2rem] sm:min-h-[2.5rem] flex items-center justify-center px-2"
           {...fadeInLeft}
         >
           <TypewriterEffect />
         </motion.div>
 
         <motion.p 
-          className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
+          className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4"
           {...fadeInRight}
         >
           {personalInfo.tagline}
@@ -131,19 +139,20 @@ export default function HeroSection() {
           
           <div className="flex items-center gap-2 text-muted-foreground">
             <Github size={20} />
-            <span>{personalInfo.githubStats.followers} followers</span>
+            <span>{githubStats.followers} followers</span>
           </div>
         </motion.div>
 
         <motion.div 
-          className="flex flex-wrap items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 px-4"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <a
-            href={contact.email}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
+            href={`mailto:${contact.email}`}
+            onClick={copyEmail}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
             <Mail size={20} />
             Get In Touch
@@ -153,7 +162,7 @@ export default function HeroSection() {
             href={contact.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 glass rounded-lg font-medium hover:bg-white/10 transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 glass rounded-lg font-medium hover:bg-white/10 transition-colors"
           >
             <Github size={20} />
             GitHub
@@ -163,7 +172,7 @@ export default function HeroSection() {
             href={contact.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 glass rounded-lg font-medium hover:bg-white/10 transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 glass rounded-lg font-medium hover:bg-white/10 transition-colors"
           >
             <Linkedin size={20} />
             LinkedIn
@@ -172,17 +181,17 @@ export default function HeroSection() {
 
         {/* Tech stack showcase */}
         <motion.div 
-          className="pt-12 border-t border-border/30"
+          className="mt-12 pt-12 lg:mt-4 lg:pt-4 border-t border-border/30 mx-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
-          <p className="text-sm text-muted-foreground mb-6 text-center font-medium">Primary Tech Stack</p>
-          <div className="flex flex-wrap items-center justify-center gap-3 max-w-5xl mx-auto">
-            {['TypeScript', 'Next.js', 'React Native', 'Node.js', 'PostgreSQL', 'Docker'].map((tech, index) => (
+          <p className="text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6 text-center font-medium">Primary Tech Stack</p>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 max-w-5xl mx-auto">
+            {['TypeScript', 'Next.js', 'React Native', 'Node.js', 'PostgreSQL', 'Docker', 'Cloudflare'].map((tech, index) => (
               <motion.div
                 key={tech}
-                className="px-5 py-3 glass rounded-xl text-sm font-medium border border-white/20 hover:border-primary/50 transition-all duration-300"
+                className="px-3 sm:px-5 py-2 sm:py-3 glass rounded-lg sm:rounded-xl text-xs sm:text-sm font-medium border border-white/20 hover:border-primary/50 transition-all duration-300"
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}

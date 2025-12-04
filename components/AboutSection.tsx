@@ -3,8 +3,11 @@
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, Building } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio';
+import { useGitHubStats } from '@/hooks/useGitHubStats';
 
 export default function AboutSection() {
+  const { stats: githubStats, loading } = useGitHubStats();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -103,15 +106,21 @@ export default function AboutSection() {
                 <h3 className="text-2xl font-bold mb-6">GitHub Stats</h3>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">{personalInfo.githubStats.followers}</div>
+                    <div className="text-2xl font-bold text-primary">
+                      {loading ? <span className="animate-pulse">--</span> : githubStats.followers}
+                    </div>
                     <div className="text-sm text-muted-foreground">Followers</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">{personalInfo.githubStats.repositories}</div>
+                    <div className="text-2xl font-bold text-primary">
+                      {loading ? <span className="animate-pulse">--</span> : githubStats.repositories}
+                    </div>
                     <div className="text-sm text-muted-foreground">Repositories</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">{personalInfo.githubStats.contributions}+</div>
+                    <div className="text-2xl font-bold text-primary">
+                      {loading ? <span className="animate-pulse">--</span> : `${githubStats.contributions}+`}
+                    </div>
                     <div className="text-sm text-muted-foreground">Contributions</div>
                   </div>
                 </div>

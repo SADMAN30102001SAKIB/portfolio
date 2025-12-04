@@ -15,7 +15,7 @@ export interface Project {
   }[];
   startDate: string;
   endDate?: string;
-  status: 'Completed' | 'In Progress' | 'Planned';
+  status: 'Completed' | 'Ongoing' | 'Planned';
   imageUrl?: string;
   highlights: string[];
 }
@@ -64,7 +64,9 @@ export interface Certificate {
   date: string;
   credentialId?: string;
   credentialUrl?: string;
-  skills: string[];
+  imageUrl?: string;
+  description?: string;
+  skills?: string[];
 }
 
 export interface Contact {
@@ -75,4 +77,10 @@ export interface Contact {
   linkedin: string;
   website?: string;
   resume?: string;
+}
+
+export interface GitHubStats {
+  followers: number;
+  repositories: number;
+  contributions: number;
 }

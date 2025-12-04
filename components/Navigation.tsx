@@ -4,15 +4,20 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 import { contact } from '@/data/portfolio';
+import { useEmailCopy } from './EmailCopyProvider';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { copyEmail } = useEmailCopy();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
+
+    // Check initial scroll position on mount
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -40,7 +45,7 @@ export default function Navigation() {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || isOpen
           ? 'glass border-b border-border/50'
           : 'bg-transparent'
       }`}
@@ -68,8 +73,8 @@ export default function Navigation() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          <div className="hidden lg:block">
+            <div className="ml-6 flex items-baseline space-x-1 xl:space-x-2">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -78,7 +83,7 @@ export default function Navigation() {
                     e.preventDefault();
                     scrollToSection(item.href);
                   }}
-                  className="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-foreground hover:text-primary px-2 xl:px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap"
                 >
                   {item.name}
                 </a>
@@ -87,7 +92,7 @@ export default function Navigation() {
           </div>
 
           {/* Social Links */}
-          <div className="hidden md:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-3">
             <a
               href={contact.github}
               target="_blank"
@@ -106,6 +111,7 @@ export default function Navigation() {
             </a>
             <a
               href={`mailto:${contact.email}`}
+              onClick={copyEmail}
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Mail size={20} />
@@ -113,7 +119,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground hover:text-primary focus:outline-none"
@@ -127,7 +133,7 @@ export default function Navigation() {
       {/* Mobile Navigation */}
       {isOpen && (
         <motion.div
-          className="md:hidden glass border-t border-border/50"
+          className="lg:hidden"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
@@ -167,6 +173,7 @@ export default function Navigation() {
               </a>
               <a
                 href={`mailto:${contact.email}`}
+                onClick={copyEmail}
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail size={20} />

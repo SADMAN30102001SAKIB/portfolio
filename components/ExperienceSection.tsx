@@ -31,24 +31,34 @@ export default function ExperienceSection() {
         </motion.div>
 
         <motion.div 
-          className="space-y-8"
+          className="relative"
           variants={staggerChildren}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {experiences.map((experience) => (
+          {/* Timeline line */}
+          <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary/20 to-transparent hidden lg:block" />
+          
+          {experiences.map((experience, index) => (
             <motion.div
               key={experience.id}
               variants={fadeInUp}
-              className="glass rounded-xl p-8 hover:bg-white/5 transition-all duration-300 border border-white/10"
+              className="relative mb-8 last:mb-0"
             >
-              <div className="flex flex-col lg:flex-row lg:items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center">
-                    <Briefcase className="w-8 h-8 text-primary" />
+              {/* Timeline dot */}
+              <div className="absolute left-8 -translate-x-1/2 top-10 hidden lg:flex items-center justify-center">
+                <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg shadow-primary/30" />
+                <div className="absolute w-8 h-8 bg-primary/20 rounded-full animate-ping" />
+              </div>
+              
+              <div className="lg:ml-16 glass rounded-xl p-8 hover:bg-white/5 transition-all duration-300 border border-white/10 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
+                <div className="flex flex-col lg:flex-row lg:items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center">
+                      <Briefcase className="w-8 h-8 text-primary" />
+                    </div>
                   </div>
-                </div>
                 
                 <div className="flex-grow">
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
@@ -141,6 +151,7 @@ export default function ExperienceSection() {
                     </div>
                   )}
                 </div>
+              </div>
               </div>
             </motion.div>
           ))}

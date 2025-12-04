@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import favicon from './favicon.ico';
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { EmailCopyProvider } from '@/components/EmailCopyProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -37,9 +38,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning={true}>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning={true}>
-        <div className="min-h-screen bg-background text-foreground">
-          {children}
-        </div>
+        <EmailCopyProvider>
+          <div className="min-h-screen bg-background text-foreground">
+            {children}
+          </div>
+        </EmailCopyProvider>
       </body>
     </html>
   )

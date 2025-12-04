@@ -2,16 +2,10 @@ import { Project, Experience, Education, Skill, Certificate, Contact } from '@/t
 
 export const personalInfo = {
   name: "Sadman Sakib",
-  title: "Full Stack Developer",
   tagline: "Building scalable applications with modern technologies",
   bio: "I'm a Software Developer with 2+ years of hands-on experience in building scalable web & mobile applications using Next.js, React Native, TypeScript, PostgreSQL, Docker, GitHub Actions, VPS etc. My focus is on delivering clean code, scalable architecture, and seamless user experience across platforms.",
   location: "Rajshahi, Bangladesh",
-  openToWork: true,
-  githubStats: {
-    followers: 11,
-    repositories: 39,
-    contributions: 1360
-  }
+  openToWork: true
 };
 
 export const contact: Contact = {
@@ -22,6 +16,31 @@ export const contact: Contact = {
 };
 
 export const projects: Project[] = [
+  {
+    id: "algoloom",
+    title: "AlgoLoom (AI-Powered Coding Platform)",
+    description: "LeetCode-style competitive programming platform with AI-powered hints, real-time code execution, gamification system, and global leaderboard.",
+    fullDescription: "AlgoLoom is a modern algorithmic problem-solving platform that blends competitive programming with AI mentorship. Features real-time code execution via Judge0, progressive AI hints powered by Gemini, XP-based leveling system, achievements, streaks, and a comprehensive admin panel. Built with ~10K lines of TypeScript.",
+    technologies: ["Next.js 14", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "NextAuth.js v5", "Judge0 API", "Google Gemini", "Monaco Editor", "Resend", "Vercel"],
+    category: "Web Development",
+    featured: true,
+    liveUrl: "https://algoloom.sadman.me",
+    githubUrl: "https://github.com/SADMAN30102001SAKIB/algoloom",
+    startDate: "2025-10",
+    status: "Ongoing",
+    highlights: [
+      "AI-powered progressive hints via Gemini (non-spoiler guidance)",
+      "Real-time code execution with Judge0 (Python, C++, Java, JS)",
+      "Monaco Editor with IntelliSense and auto-formatting",
+      "Gamification: XP, levels, streaks, achievements, global leaderboard",
+      "30+ curated problems with difficulty tiers and company tags",
+      "Email verification + OAuth (Google/GitHub) authentication",
+      "User profiles with activity heatmap and submission history",
+      "Admin panel for problem/user management and moderation",
+      "Rate limiting and role-based access control",
+      "ISR and Server Components for optimized performance"
+    ]
+  },
   {
     id: "static-site-builder",
     title: "Static Site Builder",
@@ -141,11 +160,17 @@ export const projects: Project[] = [
     title: "OMRElite (Computer Vision Mobile App)",
     description: "Mobile app for evaluating OMR/Bubble Sheet based exams using computer vision to reduce tedious manual evaluation.",
     fullDescription: "OMRElite is a computer vision mobile app designed to reduce the tedious process of evaluating OMR Sheets by hand, which is time consuming and might lead to wrong evaluations. The app can evaluate papers in minutes with computer vision.",
-    technologies: ["React Native", "Python", "OpenCV", "Flask", "Computer Vision"],
+    technologies: ["React Native", "Android Studio", "Python", "OpenCV", "Flask", "Computer Vision"],
     category: "Mobile Development",
     featured: true,
     videoUrl: "https://youtu.be/AUjXJHea0jA",
     githubUrl: "https://github.com/SADMAN30102001SAKIB/OMRElite",
+    additionalLinks: [
+      {
+        name: "Download APK",
+        url: "https://github.com/SADMAN30102001SAKIB/omrelite/releases/download/apk/OMRElite-v1.0.apk"
+      }
+    ],
     startDate: "2024-03",
     endDate: "2024-05",
     status: "Completed",
@@ -307,7 +332,7 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     id: "nexus-cofounder",
-    title: "Co-Founder",
+    title: "Co-Founder & Tech Lead",
     company: "Nexus Future Fund",
     type: "Co-Founder",
     location: "Rajshahi, Bangladesh (Hybrid)",
@@ -320,8 +345,7 @@ export const experiences: Experience[] = [
       "Led full-stack development from conception to deployment",
       "Built secure user dashboards with wallet tracking and performance analytics",
       "Implemented real-time trade replication for 50+ MT5 slave accounts",
-      "Developed Discord bot integration for trading signals",
-      "Created enterprise-grade code structure with proper versioning and environment isolation"
+      "Developed Discord bot integration for trading signals"
     ],
     websiteUrl: "https://nexusfuturefund.sadman.me"
   }
@@ -338,20 +362,30 @@ export const education: Education[] = [
     current: true,
     description: "Pursuing Bachelor's degree in Computer Science and Engineering with focus on software development, algorithms, and system design.",
     relevant_courses: [
-      "Algorithm Analysis and Design",
+      "Structured Programming",
+      "Computer Fundamentals and Ethics",
       "Data Structure",
-      "Database Systems", 
-      "Software Engineering",
-      "Operating Systems",
+      "Competitive Programming",
       "Object Oriented Programming",
-      "Web Based Application Project",
-      "Software Development Project I & II",
-      "Data Communication",
-      "Computer Architecture",
-      "Artificial Intelligence",
-      "Theory of Computation",
+      "Algorithm Analysis and Design",
+      "Technical Writing and Presentation",
+      "Discrete Mathematics",
+      "Software Development Project I",
+      "Digital Logic Design",
       "Numerical Methods",
-      "Discrete Mathematics"
+      "Microprocessors, Microcontrollers & Assembly Language",
+      "Database Systems",
+      "Web Based Application Project",
+      "Theory of Computation",
+      "Computer Interfacing and Embedded Systems",
+      "Computer Architecture",
+      "Applied Statistics and Queuing Theory",
+      "Operating Systems",
+      "Software Development Project II",
+      "Data Communication",
+      "Software Engineering",
+      "Artificial Intelligence",
+      "Digital Signal Processing"
     ]
   },
   {
@@ -378,25 +412,23 @@ export const education: Education[] = [
 
 export const skills: Skill[] = [
   // Frontend
-  { name: "TypeScript", category: "Frontend", proficiency: 5, yearsOfExperience: 2, projects: ["static-site-builder", "ruet-result-system", "nexus-future-fund"] },
-  { name: "Next.js", category: "Frontend", proficiency: 5, yearsOfExperience: 2, projects: ["static-site-builder", "ruet-result-system", "nexus-future-fund"] },
-  { name: "React.js", category: "Frontend", proficiency: 5, yearsOfExperience: 2, projects: ["static-site-builder", "nexus-future-fund"] },
+  { name: "TypeScript", category: "Frontend", proficiency: 5, yearsOfExperience: 2, projects: ["algoloom", "static-site-builder", "ruet-result-system", "nexus-future-fund"] },
+  { name: "Next.js", category: "Frontend", proficiency: 5, yearsOfExperience: 2, projects: ["algoloom", "static-site-builder", "ruet-result-system", "nexus-future-fund"] },
   { name: "React Native", category: "Mobile", proficiency: 4, yearsOfExperience: 1, projects: ["omrelite"] },
-  { name: "JavaScript", category: "Frontend", proficiency: 5, yearsOfExperience: 3, projects: ["static-site-builder", "ode-solver", "coverpage-builder", "snake-mania", "mobile-controlled-car", "disposable-browser-service"] },
-  { name: "Tailwind CSS", category: "Frontend", proficiency: 5, yearsOfExperience: 2, projects: ["static-site-builder", "nexus-future-fund"] },
-  { name: "CSS", category: "Frontend", proficiency: 4, yearsOfExperience: 3, projects: ["ruet-result-system", "mobile-controlled-car"] },
+  { name: "Android Studio", category: "Mobile", proficiency: 4, yearsOfExperience: 1, projects: ["omrelite"] },
+  { name: "Tailwind CSS", category: "Frontend", proficiency: 5, yearsOfExperience: 2, projects: ["algoloom", "static-site-builder", "nexus-future-fund"] },
+  { name: "CSS", category: "Frontend", proficiency: 4, yearsOfExperience: 3, projects: ["ruet-result-system", "mobile-controlled-car", "snake-mania"] },
   
   // Backend
   { name: "Node.js", category: "Backend", proficiency: 5, yearsOfExperience: 2, projects: ["disposable-browser-service"] },
   { name: "Express.js", category: "Backend", proficiency: 5, yearsOfExperience: 2, projects: ["disposable-browser-service"] },
-  { name: "Python", category: "Backend", proficiency: 4, yearsOfExperience: 2, projects: ["nexus-future-fund", "omrelite", "ode-solver"] },
   { name: "Flask", category: "Backend", proficiency: 4, yearsOfExperience: 1, projects: ["omrelite", "ode-solver"] },
   { name: "FastAPI", category: "Backend", proficiency: 3, yearsOfExperience: 1, projects: [] },
   { name: "Django", category: "Backend", proficiency: 3, yearsOfExperience: 1, projects: [] },
   
   // Database
-  { name: "PostgreSQL", category: "Database", proficiency: 5, yearsOfExperience: 2, projects: ["static-site-builder", "ruet-result-system"] },
-  { name: "Prisma", category: "Database", proficiency: 5, yearsOfExperience: 1, projects: ["static-site-builder"] },
+  { name: "PostgreSQL", category: "Database", proficiency: 5, yearsOfExperience: 2, projects: ["algoloom", "static-site-builder", "ruet-result-system"] },
+  { name: "Prisma", category: "Database", proficiency: 5, yearsOfExperience: 1, projects: ["algoloom", "static-site-builder"] },
   { name: "MongoDB", category: "Database", proficiency: 4, yearsOfExperience: 2, projects: [] },
   { name: "Redis", category: "Database", proficiency: 4, yearsOfExperience: 1, projects: ["disposable-browser-service"] },
   { name: "MySQL", category: "Database", proficiency: 3, yearsOfExperience: 2, projects: ["coverpage-builder"] },
@@ -409,10 +441,20 @@ export const skills: Skill[] = [
   { name: "Nginx", category: "DevOps", proficiency: 3, yearsOfExperience: 1, projects: [] },
   { name: "Traefik", category: "DevOps", proficiency: 4, yearsOfExperience: 1, projects: ["disposable-browser-service"] },
   { name: "VPS", category: "DevOps", proficiency: 4, yearsOfExperience: 1, projects: ["nexus-future-fund"] },
+  { name: "Cloudflare", category: "DevOps", proficiency: 4, yearsOfExperience: 1, projects: [] },
+  { name: "pnpm", category: "Tools", proficiency: 5, yearsOfExperience: 2, projects: [] },
+  { name: "VS Code", category: "Tools", proficiency: 5, yearsOfExperience: 4, projects: [] },
+  { name: "Postman", category: "Tools", proficiency: 4, yearsOfExperience: 2, projects: [] },
+  { name: "ESLint", category: "Tools", proficiency: 4, yearsOfExperience: 2, projects: [] },
+  { name: "Prettier", category: "Tools", proficiency: 4, yearsOfExperience: 2, projects: [] },
+  { name: "GitHub Copilot", category: "Tools", proficiency: 5, yearsOfExperience: 1, projects: [] },
+  { name: "WSL", category: "Tools", proficiency: 4, yearsOfExperience: 2, projects: [] },
   
   // Programming Languages
   { name: "C++", category: "Language", proficiency: 4, yearsOfExperience: 3, projects: ["multiplayer-snake", "mycash", "mobile-controlled-car"] },
   { name: "C", category: "Language", proficiency: 3, yearsOfExperience: 2, projects: ["student-record-system"] },
+  { name: "JavaScript", category: "Language", proficiency: 5, yearsOfExperience: 3, projects: ["algoloom", "static-site-builder", "ode-solver", "coverpage-builder", "snake-mania", "mobile-controlled-car", "disposable-browser-service"] },
+  { name: "Python", category: "Language", proficiency: 4, yearsOfExperience: 2, projects: ["nexus-future-fund", "omrelite", "ode-solver"] },
   { name: "PHP", category: "Language", proficiency: 3, yearsOfExperience: 1, projects: ["coverpage-builder"] },
   
   // Specialized
@@ -420,23 +462,43 @@ export const skills: Skill[] = [
   { name: "MQL5", category: "Other", proficiency: 3, yearsOfExperience: 1, projects: ["nexus-future-fund"] },
   { name: "Discord API", category: "Other", proficiency: 4, yearsOfExperience: 1, projects: ["nexus-future-fund"] },
   { name: "Stripe API", category: "Other", proficiency: 4, yearsOfExperience: 1, projects: ["static-site-builder"] },
-  { name: "NextAuth.js", category: "Backend", proficiency: 5, yearsOfExperience: 1, projects: ["static-site-builder"] },
+  { name: "NextAuth.js", category: "Backend", proficiency: 5, yearsOfExperience: 1, projects: ["algoloom", "static-site-builder"] },
   { name: "Zustand", category: "Frontend", proficiency: 4, yearsOfExperience: 1, projects: ["static-site-builder"] },
   { name: "React DnD", category: "Frontend", proficiency: 4, yearsOfExperience: 1, projects: ["static-site-builder"] },
   { name: "WebSocket", category: "Backend", proficiency: 4, yearsOfExperience: 1, projects: ["disposable-browser-service"] },
   { name: "GraphQL", category: "Backend", proficiency: 3, yearsOfExperience: 1, projects: [] },
   { name: "gRPC", category: "Backend", proficiency: 3, yearsOfExperience: 1, projects: [] },
+  { name: "Judge0 API", category: "Other", proficiency: 4, yearsOfExperience: 1, projects: ["algoloom"] },
+  { name: "Google Gemini", category: "Other", proficiency: 4, yearsOfExperience: 1, projects: ["algoloom"] },
+  { name: "Monaco Editor", category: "Frontend", proficiency: 4, yearsOfExperience: 1, projects: ["algoloom"] },
+  { name: "Resend", category: "Other", proficiency: 4, yearsOfExperience: 1, projects: ["algoloom"] },
+  { name: "HTML", category: "Frontend", proficiency: 5, yearsOfExperience: 4, projects: ["mobile-controlled-car", "snake-mania"] },
+  { name: "Appwrite", category: "Backend", proficiency: 4, yearsOfExperience: 1, projects: ["nexus-future-fund"] },
+  { name: "PWA", category: "Frontend", proficiency: 4, yearsOfExperience: 1, projects: ["nexus-future-fund", "static-site-builder"] },
+  { name: "Vercel", category: "DevOps", proficiency: 5, yearsOfExperience: 2, projects: ["algoloom", "static-site-builder", "ruet-result-system"] },
+  { name: "ESP8266", category: "Other", proficiency: 3, yearsOfExperience: 1, projects: ["mobile-controlled-car"] },
+  { name: "SymPy", category: "Other", proficiency: 3, yearsOfExperience: 1, projects: ["ode-solver"] },
+  { name: "KaTeX", category: "Frontend", proficiency: 3, yearsOfExperience: 1, projects: ["ode-solver"] },
 ];
 
 export const certificates: Certificate[] = [
+  {
+    id: "solvio-ai-hackathon",
+    name: "Top 100 Teams - Solvio AI Hackathon 2025",
+    issuer: "Sheba Platform Limited",
+    date: "2025-11",
+    description: "Selected among the Top 100 teams (out of 800) for outstanding performance and innovation in the Solvio AI Hackathon 2025, Bangladesh's largest AI-focused hackathon. Recognized for proposing a high-impact solution for EdTech platforms in Bangladesh under tight deadlines as part of Team ProspectLab. Our product was 'OMRElite: A Computer Vision Mobile App for Evaluating OMR Sheets'.",
+    imageUrl: "/certificates/solvio-hackathon.jpg"
+  },
   {
     id: "100xdevs-fullstack",
     name: "0-100 Full Stack Web Development",
     issuer: "100xDevs",
     date: "2025-08",
     credentialId: "5CLSDC5H",
+    credentialUrl: "https://app.100xdevs.com/certificate/verify/5CLSDC5H",
     skills: [
-      "React.js", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "MongoDB", 
+      "Next.js", "React.js", "Node.js", "TypeScript", "PostgreSQL", "MongoDB", 
       "Docker", "Kubernetes", "WebSocket", "GraphQL", "gRPC", "Redis", 
       "OpenAPI Specification", "Testing", "CI/CD"
     ]

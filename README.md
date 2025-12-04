@@ -1,20 +1,26 @@
 # Sadman Sakib - Portfolio
 
-A modern portfolio website showcasing my projects and experience as a Full Stack Developer.
+A modern, high-performance portfolio website built with ISR (Incremental Static Regeneration) for optimal speed and SEO.
 
 ## ✨ Features
 
-- **Dynamic Typewriter Effect** - Cycles through multiple professional roles
+- **ISR + SSG** - Static generation with automatic revalidation
+- **Real-time GitHub Stats** - Server-fetched, cached hourly
+- **Dynamic Typewriter Effect** - Cycles through professional roles
 - **Project Filtering** - Filter by category with smooth animations  
 - **Experience Timeline** - Professional work history with achievements
-- **Responsive Design** - Works perfectly on all devices
-- **Modern UI** - Glassmorphism design with smooth animations
+- **Education Section** - Collapsible course details
+- **Certifications** - Image modal for certificate viewing
+- **Copy-to-Clipboard** - Email copied with toast notification
+- **Responsive Design** - Mobile-first, works on all devices
+- **Modern UI** - Glassmorphism design with Framer Motion animations
 
 ## 🛠️ Tech Stack
 
-- Next.js 15 + TypeScript
+- Next.js 15 + TypeScript + ISR
 - Tailwind CSS + Framer Motion
-- Vercel deployment ready
+- Server Components + Client Hydration
+- Vercel Edge CDN deployment
 
 ## 🏍️ Quick Start
 
@@ -43,4 +49,4 @@ All content is in `data/portfolio.ts`:
 
 ---
 
-Built with ❤️ using Next.js
+Built with ❤️ using Next.js & ISR
