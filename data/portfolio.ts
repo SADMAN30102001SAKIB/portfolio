@@ -134,7 +134,7 @@ export const projects: Project[] = [
     fullDescription: "Fully reengineered RUET's legacy result management system into a modern, scalable web platform using Next.js and PostgreSQL — built from the ground up to handle everything from student enrollment to automated SGPA/CGPA calculation. Around 20K lines of code, built from scratch for fun and turned into a full-blown academic engine.",
     technologies: ["Next.js 15", "TypeScript", "PostgreSQL", "CSS Modules", "Vercel", "Session Auth", "RBAC"],
     category: "Web Development",
-    featured: true,
+    featured: false,
     liveUrl: "https://ruet-ugrms.sadman.me",
     githubUrl: "https://github.com/SADMAN30102001SAKIB/ruet-undergraduate-result-management-system",
     startDate: "2025-05",
@@ -157,7 +157,7 @@ export const projects: Project[] = [
     fullDescription: "Nexus Future Fund is a cutting-edge, crypto-based hedge fund platform designed to deliver high monthly return of investment through risk-managed, algorithmic trading. I led the full-stack development of the platform, which combines Next.js, Appwrite, PWA, Discord BOT, TypeScript and a custom internal trade automation system.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Appwrite", "PWA", "Discord API", "Python", "MQL5", "MetaTrader", "VPS"],
     category: "Web Development",
-    featured: true,
+    featured: false,
     liveUrl: "https://nexusfuturefund.sadman.me",
     githubUrl: "https://github.com/SADMAN30102001SAKIB/nexus-future-fund",
     additionalLinks: [
@@ -226,7 +226,7 @@ export const projects: Project[] = [
     fullDescription: "A really fun CLI-based game made with Object-Oriented Programming paradigm that you can play with your friend on the same computer.",
     technologies: ["C++", "OOP"],
     category: "Game Development",
-    featured: false,
+    featured: true,
     githubUrl: "https://github.com/SADMAN30102001SAKIB/cli-based-multiplayer-snake",
     additionalLinks: [
       {
@@ -270,7 +270,7 @@ export const projects: Project[] = [
     fullDescription: "A web application that solves ordinary differential equations (general + particular solutions) just by writing the ODE. Uses KaTeX for displaying math expressions and SymPy for solving equations.",
     technologies: ["JavaScript", "Python", "Flask", "KaTeX", "SymPy", "LaTeX"],
     category: "Web Development",
-    featured: false,
+    featured: true,
     liveUrl: "https://odesolver.sadman.me",
     githubUrl: "https://github.com/SADMAN30102001SAKIB/ordinary-differential-equation-solver-client",
     additionalLinks: [
@@ -335,7 +335,7 @@ export const projects: Project[] = [
     fullDescription: "A web application for the ESP8266 microcontroller for my mobile controlled car project. Built with embedded C++, HTML, CSS, and JavaScript for wireless car control.",
     technologies: ["C++", "JavaScript", "HTML", "CSS", "ESP8266", "Robotics"],
     category: "Other",
-    featured: false,
+    featured: true,
     videoUrl: "https://youtu.be/-NgneH3xZGs",
     githubUrl: "https://github.com/SADMAN30102001SAKIB/esp8266server-webapp-for-mobile-controlled-car",
     startDate: "2022-11",
