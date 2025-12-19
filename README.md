@@ -27,8 +27,8 @@ A modern, high-performance portfolio website built with ISR (Incremental Static 
 ```bash
 git clone https://github.com/SADMAN30102001SAKIB/portfolio.git
 cd portfolio
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 Open [localhost:3000](http://localhost:3000) to view the portfolio.
