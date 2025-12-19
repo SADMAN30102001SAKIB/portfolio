@@ -16,6 +16,41 @@ export const contact: Contact = {
 };
 
 export const projects: Project[] = [
+    {
+    id: "digital-circuit-simulator",
+    title: "Digital Circuit Simulator (Qt Desktop App)",
+    description: "Modern, professional digital logic circuit simulator with real-time simulation, drag-and-drop canvas, and scalable truth-table generation.",
+    fullDescription: "A modern desktop digital circuit simulator built with PySide6 (Qt for Python), designed to feel native, fast, and production-grade. Features a QGraphicsScene-based canvas with smooth pan/zoom, real-time logic simulation, modular component architecture, and a carefully engineered truth-table system capable of handling very large input spaces without memory blowups. Distributed as a standalone Windows executable with no Python dependency.",
+    technologies: [
+      "Python",
+      "PySide6 (Qt)",
+      "YAML",
+    ],
+    category: "System Development",
+    featured: true,
+    githubUrl: "https://github.com/SADMAN30102001SAKIB/digital-circuit-simulator",
+    additionalLinks: [
+      {
+        name: "Download EXE",
+        url: "https://github.com/SADMAN30102001SAKIB/digital-circuit-simulator/releases/download/v3.0/CircuitPlaygroundProV3.0.exe"
+      }
+    ],
+    startDate: "2025-12",
+    endDate: "2025-12",
+    status: "Ongoing",
+    highlights: [
+      "QGraphicsScene-based canvas with anti-aliased rendering, pan & zoom",
+      "Real-time digital logic simulation with inputs, outputs, and wire routing",
+      "Dockable component library and dynamic property panels",
+      "Undo/Redo system with 50-step history",
+      "Circuit persistence using YAML with stable UID mapping",
+      "Standalone Windows executable built with PyInstaller (no Python required)",
+      "Model-based truth-table generation (QAbstractTableModel) for large circuits",
+      "Fixed massive memory spikes in large truth tables (~800MB → ~45MB RSS)",
+      "Safe export pipeline with cancelable chunked CSV generation",
+      "Clean separation of core logic, simulator engine, and Qt UI layer"
+    ]
+  },
   {
     id: "algoloom",
     title: "AlgoLoom (AI-Powered Coding Platform)",
@@ -193,6 +228,12 @@ export const projects: Project[] = [
     category: "Game Development",
     featured: false,
     githubUrl: "https://github.com/SADMAN30102001SAKIB/cli-based-multiplayer-snake",
+    additionalLinks: [
+      {
+        name: "Download EXE",
+        url: "https://github.com/SADMAN30102001SAKIB/cli-based-multiplayer-snake/releases/download/executable/snake.exe"
+      }
+    ],
     startDate: "2023-12",
     endDate: "2023-12",
     status: "Completed",
@@ -449,12 +490,13 @@ export const skills: Skill[] = [
   { name: "Prettier", category: "Tools", proficiency: 4, yearsOfExperience: 2, projects: [] },
   { name: "GitHub Copilot", category: "Tools", proficiency: 5, yearsOfExperience: 1, projects: [] },
   { name: "WSL", category: "Tools", proficiency: 4, yearsOfExperience: 2, projects: [] },
+  { name: "YAML", category: "Tools", proficiency: 4, yearsOfExperience: 2, projects: ["digital-circuit-simulator"] },
   
   // Programming Languages
   { name: "C++", category: "Language", proficiency: 4, yearsOfExperience: 3, projects: ["multiplayer-snake", "mycash", "mobile-controlled-car"] },
   { name: "C", category: "Language", proficiency: 3, yearsOfExperience: 2, projects: ["student-record-system"] },
   { name: "JavaScript", category: "Language", proficiency: 5, yearsOfExperience: 3, projects: ["algoloom", "static-site-builder", "ode-solver", "coverpage-builder", "snake-mania", "mobile-controlled-car", "disposable-browser-service"] },
-  { name: "Python", category: "Language", proficiency: 4, yearsOfExperience: 2, projects: ["nexus-future-fund", "omrelite", "ode-solver"] },
+  { name: "Python", category: "Language", proficiency: 4, yearsOfExperience: 2, projects: ["digital-circuit-simulator", "nexus-future-fund", "omrelite", "ode-solver"] },
   { name: "PHP", category: "Language", proficiency: 3, yearsOfExperience: 1, projects: ["coverpage-builder"] },
   
   // Specialized
@@ -479,6 +521,7 @@ export const skills: Skill[] = [
   { name: "ESP8266", category: "Other", proficiency: 3, yearsOfExperience: 1, projects: ["mobile-controlled-car"] },
   { name: "SymPy", category: "Other", proficiency: 3, yearsOfExperience: 1, projects: ["ode-solver"] },
   { name: "KaTeX", category: "Frontend", proficiency: 3, yearsOfExperience: 1, projects: ["ode-solver"] },
+  { name: "PySide6 (Qt)", category: "Frontend", proficiency: 3, yearsOfExperience: 1, projects: ["digital-circuit-simulator"] },
 ];
 
 export const certificates: Certificate[] = [
