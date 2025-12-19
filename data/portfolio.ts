@@ -27,7 +27,7 @@ export const projects: Project[] = [
       "YAML",
     ],
     category: "System Development",
-    featured: true,
+    featured: false,
     githubUrl: "https://github.com/SADMAN30102001SAKIB/digital-circuit-simulator",
     additionalLinks: [
       {
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     ],
     startDate: "2025-12",
     endDate: "2025-12",
-    status: "Ongoing",
+    status: "Completed",
     highlights: [
       "QGraphicsScene-based canvas with anti-aliased rendering, pan & zoom",
       "Real-time digital logic simulation with inputs, outputs, and wire routing",
