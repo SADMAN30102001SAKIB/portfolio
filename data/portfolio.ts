@@ -31,8 +31,8 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/SADMAN30102001SAKIB/digital-circuit-simulator",
     additionalLinks: [
       {
-        name: "Download EXE",
-        url: "https://github.com/SADMAN30102001SAKIB/digital-circuit-simulator/releases/download/v3.0/CircuitPlaygroundProV3.0.exe"
+        name: "Go to Downloads",
+        url: "https://github.com/SADMAN30102001SAKIB/digital-circuit-simulator/releases/tag/v3.1.3"
       }
     ],
     startDate: "2025-12",
@@ -252,7 +252,7 @@ export const projects: Project[] = [
     technologies: ["C++", "OOP"],
     category: "System Development",
     featured: false,
-    githubUrl: "https://github.com/SADMAN30102001SAKIB/myCash",
+    githubUrl: "https://github.com/SADMAN30102001SAKIB/my-cash",
     startDate: "2023-11",
     endDate: "2023-11",
     status: "Completed",
@@ -356,8 +356,8 @@ export const projects: Project[] = [
     technologies: ["JavaScript", "HTML", "CSS"],
     category: "Game Development",
     featured: false,
-    liveUrl: "https://sadman30102001sakib.github.io/snakeMania/",
-    githubUrl: "https://github.com/SADMAN30102001SAKIB/snakeMania",
+    liveUrl: "https://sadman30102001sakib.github.io/snake-mania",
+    githubUrl: "https://github.com/SADMAN30102001SAKIB/snake-mania",
     startDate: "2020-01",
     endDate: "2020-01",
     status: "Completed",
