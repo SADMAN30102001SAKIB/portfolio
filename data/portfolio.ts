@@ -130,8 +130,8 @@ export const projects: Project[] = [
   {
     id: "ruet-result-system",
     title: "RUET Undergraduate Result Management System",
-    description: "Fully reengineered RUET's legacy result management system into a modern, scalable web platform using Next.js and PostgreSQL.",
-    fullDescription: "Fully reengineered RUET's legacy result management system into a modern, scalable web platform using Next.js and PostgreSQL — built from the ground up to handle everything from student enrollment to automated SGPA/CGPA calculation. Around 20K lines of code, built from scratch for fun and turned into a full-blown academic engine.",
+    description: "Full-scale academic engine featuring official PDF transcript generation and a premium, secure student dashboard.",
+    fullDescription: "A comprehensive reconstruction of RUET’s legacy result system into a high-performance web platform. Built from the ground up to handle the entire academic lifecycle—from student enrollment and course registration to automated SGPA/CGPA calculation. Features an official-grade PDF engine for institutional transcripts and a security-first data policy that sanitizes raw marks on the server.",
     technologies: ["Next.js 15", "TypeScript", "PostgreSQL", "CSS Modules", "Vercel", "Session Auth", "RBAC"],
     category: "Web Development",
     featured: false,
@@ -141,13 +141,13 @@ export const projects: Project[] = [
     endDate: "2025-07",
     status: "Completed",
     highlights: [
-      "Admin portal to manage students, departments, courses, and publish results",
-      "Student portal with course registration and CGPA tracking",
-      "Automated SGPA/CGPA calculation (credit-weighted, grade-letter mapped)",
-      "Role-Based Access Control (Admin/Student)",
-      "Session-based auth with secure cookies",
-      "Middleware for route protection",
-      "Responsive UI with custom shadcn/ui-like components"
+      "Official PDF Engine: Generates branded Academic Transcripts and Backlog Routines with watermarks and signature areas",
+      "Data Privacy System: Implemented server-side mark stripping to ensure student-facing results show only finalized grades/GPs",
+      "Premium UX/UI: High-end glassmorphic student dashboard with performance charts and SGPA trend tracking",
+      "Admin Command Center: Full control over departments, courses, student promotions, and result publication",
+      "Automated Academic Logic: Credit-weighted calculation engine mapped to RUET's official grading standards",
+      "Serverless Optimization: Custom connection pooling (max: 8) and manual migration layer for Neon PostgreSQL scaling",
+      "Middleware Protection: Comprehensive Role-Based Access Control (RBAC) and route-level session security"
     ]
   },
   {
