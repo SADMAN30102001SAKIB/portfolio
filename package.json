@@ -11,7 +11,7 @@
     "pages:deploy": "pnpm pages:build && wrangler pages deploy .vercel/output/static"
   },
   "dependencies": {
-    "@types/node": "^20.8.10",
+    "@types/node": "^20.19.26",
     "@types/react": "^18.3.26",
     "@types/react-dom": "^18.2.14",
     "framer-motion": "^10.16.16",
