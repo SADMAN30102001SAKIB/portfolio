@@ -36,8 +36,7 @@ export const projects: Project[] = [
       }
     ],
     startDate: "2025-12",
-    endDate: "2025-12",
-    status: "Completed",
+    status: "Ongoing",
     highlights: [
       "QGraphicsScene-based canvas with anti-aliased rendering, pan & zoom",
       "Real-time digital logic simulation with inputs, outputs, and wire routing",
@@ -62,7 +61,8 @@ export const projects: Project[] = [
     liveUrl: "https://algoloom.sadman.me",
     githubUrl: "https://github.com/SADMAN30102001SAKIB/algoloom",
     startDate: "2025-10",
-    status: "Ongoing",
+    endDate: "2026-01",
+    status: "Completed",
     highlights: [
       "AI-powered progressive hints via Gemini (non-spoiler guidance)",
       "Real-time code execution with Judge0 (Python, C++, Java, JS)",
@@ -207,8 +207,7 @@ export const projects: Project[] = [
       }
     ],
     startDate: "2024-03",
-    endDate: "2024-05",
-    status: "Completed",
+    status: "Ongoing",
     highlights: [
       "Creating customizable OMR Sheets (PDF generation for examination)",
       "Evaluating papers with mobile camera using computer vision",
