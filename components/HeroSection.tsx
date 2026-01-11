@@ -152,7 +152,7 @@ export default function HeroSection({ initialGitHubStats }: HeroSectionProps) {
           <a
             href={`mailto:${contact.email}`}
             onClick={copyEmail}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 bg-primary text-secondary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
             <Mail size={20} />
             Get In Touch
