@@ -25,6 +25,7 @@ export const projects: Project[] = [
       "Python",
       "PySide6 (Qt)",
       "YAML",
+      "CI/CD"
     ],
     category: "System Development",
     featured: false,
@@ -477,7 +478,7 @@ export const skills: Skill[] = [
   // DevOps & Tools
   { name: "Docker", category: "DevOps", proficiency: 5, yearsOfExperience: 1, projects: ["disposable-browser-service"] },
   { name: "Git", category: "Tools", proficiency: 5, yearsOfExperience: 3, projects: [] },
-  { name: "CI/CD", category: "DevOps", proficiency: 3, yearsOfExperience: 1, projects: [] },
+  { name: "CI/CD", category: "DevOps", proficiency: 3, yearsOfExperience: 1, projects: ["digital-circuit-simulator"] },
   { name: "Nginx", category: "DevOps", proficiency: 3, yearsOfExperience: 1, projects: [] },
   { name: "Traefik", category: "DevOps", proficiency: 4, yearsOfExperience: 1, projects: ["disposable-browser-service"] },
   { name: "VPS", category: "DevOps", proficiency: 4, yearsOfExperience: 1, projects: ["nexus-future-fund"] },
