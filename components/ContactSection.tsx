@@ -19,7 +19,7 @@ export default function ContactSection() {
           <a
             href="mailto:sadman30102001sakib@gmail.com"
             onClick={copyEmail}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-secondary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
             Get In Touch
           </a>
