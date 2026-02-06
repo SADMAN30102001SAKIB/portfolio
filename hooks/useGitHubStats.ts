@@ -7,9 +7,9 @@ const GITHUB_USERNAME = 'SADMAN30102001SAKIB';
 
 // Default fallback values
 const defaultGitHubStats: GitHubStats = {
-  followers: 11,
-  repositories: 40,
-  contributions: 1500
+  followers: 13,
+  repositories: 43,
+  contributions: 1900
 };
 
 export function useGitHubStats() {
